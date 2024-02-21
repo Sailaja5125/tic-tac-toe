@@ -1,0 +1,82 @@
+ // tic tac toe 
+ note : java script won't run s
+ |X|O|O|
+ |O|O|X|
+ |X|O|X|
+ 
+ rules :
+  there are two players in this game 
+  if the players can match either X's or O's in vertical , horizontal , or diagonal orientation
+  if neither of the orientations are matched and the boxes are filled then the game can be played again
+
+  there are total of 8 patterns of matching the patterns of either X's or 0's
+    [0,1,2],
+    [0,3,6],
+    [0,4,8],
+    [1,4,7],
+    [2,4,6],
+    [2,5,8],
+    [3,4,5],
+    [6,7,8],
+
+// to calculate the draw 
+initialize the count to 0
+
+consider player1 = true 
+ for all boxes 
+boxes.add event listener()
+ if player1 = true 
+ {
+    then enable print the X in the innerText 
+    set it to red 
+    and make the player1 = false
+ else{
+    then enable print the O in the innerText 
+    set it to blue 
+    make the player1 = true
+ }
+ box.disable = true // once clicked boxed cannot be changed
+ count++
+ checkwinnwer()
+  if(count===9 &&!checkwinnwer()){
+    set the display to replay
+     newgame()
+  }
+ 
+ }
+
+ // disable boxes 
+ for all boxes{
+box.disable = true  // box is the html class not declared class
+ }
+
+ 
+ // enable boxes 
+ for all boxes{
+box.disable = false
+box.innerText = ""  // makes the boxes empty
+ }
+  // there is a  winner only when the 
+  pos1 = pos2 = pos3
+  for(patterns of winpatterns)
+          let pos1 = boxes[pattern[0]].innerText ; // starting from 0 
+        let pos2 = boxes[pattern[1]].innerText ;  // starting from 1
+        let pos3 = boxes[pattern[2]].innerText ; // starting from 2
+    so if pos1 = "" pos2 == "" pos3 = ""
+    if(pos1 == pos2 == pos3){
+    then the player is the winnwer
+    `winner is ${pos1==="X"?"player1":"player 2"}
+    styling and font 
+    disableboxes() // no one can play once the winner is declared
+   }
+
+   /// new game
+
+   for all boxes {
+    if the replay button is clicked then 
+    {
+        enableboxes()
+   make the start with the player1 = true
+   count = 0 // to calculate the draw
+    }
+   }
